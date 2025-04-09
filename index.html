@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-lipstick"></i> BEAUTY STORE
+        </div>
+        <div class="user-info">
+            <i class="fas fa-user-circle"></i>
+            <span>SUPERADMIN</span>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h3>MAIN NAVIGATION</h3>
+            <ul>
+                <li class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+                <li><i class="fas fa-users"></i> User Management</li>
+                <li><i class="fas fa-cog"></i> General Settings</li>
+                <li><i class="fas fa-box"></i> Products</li>
+                <li><i class="fas fa-shopping-cart"></i> Purchases</li>
+                <li><i class="fas fa-dollar-sign"></i> Sales</li>
+                <li><i class="fas fa-warehouse"></i> Stock</li>
+                <li><i class="fas fa-chart-bar"></i> Reports</li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Dashboard Cards -->
+            <div class="dashboard-cards">
+                <div class="card white">
+                    <h4>Total Products</h4>
+                    <p id="totalProducts">0</p>
+                    <a href="#" class="more-info">MORE INFO <i class="fas fa-info-circle"></i></a>
+                </div>
+                <div class="card yellow">
+                    <h4>In Stock</h4>
+                    <p id="inStock">0</p>
+                    <a href="#" class="more-info">MORE INFO <i class="fas fa-info-circle"></i></a>
+                </div>
+                <div class="card pink">
+                    <h4>Out of Stock</h4>
+                    <p id="outOfStock">0</p>
+                    <a href="#" class="more-info">MORE INFO <i class="fas fa-info-circle"></i></a>
+                </div>
+                <div class="card white">
+                    <h4>Total Value</h4>
+                    <p id="totalValue">$0</p>
+                    <a href="#" class="more-info">MORE INFO <i class="fas fa-info-circle"></i></a>
+                </div>
+            </div>
+
+            <!-- Add Product Form -->
+            <div class="form-container">
+                <h2>Add New Product</h2>
+                <form id="addItemForm">
+                    <div class="form-group">
+                        <label>No: </label>
+                        <span id="productNumber">1</span>
+                    </div>
+                    <input type="text" id="productName" placeholder="Product Name" required>
+                    <input type="text" id="category" placeholder="Category (e.g., Lipstick, Foundation)" required>
+                    <input type="number" id="price" placeholder="Price ($)" step="0.01" required>
+                    <input type="number" id="stock" placeholder="Stock" required>
+                    <button type="submit">Add Product</button>
+                </form>
+            </div>
+
+            <!-- Inventory List -->
+            <div class="table-container">
+                <h2>Inventory List</h2>
+                <table id="inventoryTable">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventoryBody"></tbody>
+                </table>
+            </div>
+
+            <!-- Stock Report and Latest Purchases -->
+            <div class="tables-section">
+                <div class="table-container">
+                    <h2>Stock Report</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stockReportBody"></tbody>
+                    </table>
+                </div>
+                <div class="table-container">
+                    <h2>Latest Purchases</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Purchase ID</th>
+                                <th>Vendor</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Total</th>
+                                <th>View</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>L'Oréal</td>
+                                <td>14-02-2025</td>
+                                <td class="status-pending">PENDING</td>
+                                <td>$1,500.00</td>
+                                <td><button class="view-btn">View Purchase</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
