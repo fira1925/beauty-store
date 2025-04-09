@@ -1,2 +1,0 @@
-# beauty-store
-# beauty-store
